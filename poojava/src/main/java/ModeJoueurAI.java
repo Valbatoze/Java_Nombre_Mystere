@@ -22,7 +22,7 @@ public class ModeJoueurAI {
 		}
 		numberAI = g.nombreGenerate();
 		for (int i = 0; i < maxChance; i++) {
-			System.out.print("Nombre de vie restante à L'AI " + (maxChance - i) + " sur " + maxChance);
+			System.out.println("Nombre de vie restante à L'AI " + (maxChance - i) + " sur " + maxChance);
 			if (numberAI.equals(numberPlayer) == true) {
 				System.out.println("====");
 				System.out.println("C'est gagner");
@@ -30,8 +30,7 @@ public class ModeJoueurAI {
 			}
 			else if (numberAI.equals(numberPlayer) == false) {
 				Comparaison(numberPlayer, numberAI);
-				//numberAI = digitOne.toString() + digitTwo.toString() + digitThree.toString() + digitFour.toString();
-				numberAI = g.nombreGenerate();
+				numberAI = digitOne.toString() + digitTwo.toString() + digitThree.toString() + digitFour.toString();
 				count = 0;
 			}
 		}
