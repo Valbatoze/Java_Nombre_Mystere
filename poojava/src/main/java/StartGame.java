@@ -7,6 +7,7 @@ public class StartGame {
 		
 		PlayerGiveNumber p = new PlayerGiveNumber();
 		ModeJoueur j = new ModeJoueur();
+		ModeJoueurAI ja = new ModeJoueurAI();
 		ModeAI ai = new ModeAI();
 		String inf = new String();
 		
@@ -16,13 +17,18 @@ public class StartGame {
 			System.out.println("Mode de Jeu");
 			System.out.println("1: Générer un nombe aléatoire");
 			System.out.println("2: Un joueur rentre un nombre");
-			System.out.println("3: Pour quiter");
+			System.out.println("3: Joueur vs Joueur");
+			System.out.println("4: Pour quiter");
 			switch (p.choicePlayer()) {
 			case "1":
 				System.out.println("Vous avais choisi le mode aléatoire.");
 				ai.GameModeAI(maxChance);
 				break;
 			case "2":
+				System.out.println("Vous avais choisi le mode Joueur");
+				ja.GameModeJoueurAI(maxChance);
+				break;
+			case "3":
 				System.out.println("Vous avais choisi le mode Joueur");
 				j.GameModePlayer(maxChance);
 				break;
